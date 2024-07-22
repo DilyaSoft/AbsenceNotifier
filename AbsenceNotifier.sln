@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbsenceNotifier", "AbsenceNotifier\AbsenceNotifier.csproj", "{3B215688-5CA9-4815-A6CC-AF11E3ABC326}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbsenceNotifier.Core", "AbsenceNotifier.Core\AbsenceNotifier.Core.csproj", "{0588A977-E700-45A9-B60F-FAE8DEFB6E4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0F2F3989-5408-4E06-9182-B01B6936130A}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3CB884B2-9FDE-4545-A364-5F71CD79E1D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbsenceNotifier.Core.Tests", "AbsenceNotifier.Core.Tests\AbsenceNotifier.Core.Tests.csproj", "{0B6F9C8A-6616-4484-8AA5-6A37B712652A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbsenceNotifier.Console", "AbsenceNotifier.Console\AbsenceNotifier.Console.csproj", "{D8423F99-FDEB-4C2E-9DC6-34352862F317}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbsenceNotifier.AzureFunction", "AbsenceNotifier.AzureFunction\AbsenceNotifier.AzureFunction.csproj", "{E92F59C5-A771-4448-93B6-D36ADECFAEBF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbsenceNotifier.YandexFunction", "AbsenceNotifier.YandexFunction\AbsenceNotifier.YandexFunction.csproj", "{FDBC4926-0093-482C-95F4-3AF9CCD87A43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B215688-5CA9-4815-A6CC-AF11E3ABC326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B215688-5CA9-4815-A6CC-AF11E3ABC326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B215688-5CA9-4815-A6CC-AF11E3ABC326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B215688-5CA9-4815-A6CC-AF11E3ABC326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0588A977-E700-45A9-B60F-FAE8DEFB6E4A}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{0588A977-E700-45A9-B60F-FAE8DEFB6E4A}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{0588A977-E700-45A9-B60F-FAE8DEFB6E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0588A977-E700-45A9-B60F-FAE8DEFB6E4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B6F9C8A-6616-4484-8AA5-6A37B712652A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B6F9C8A-6616-4484-8AA5-6A37B712652A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B6F9C8A-6616-4484-8AA5-6A37B712652A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B6F9C8A-6616-4484-8AA5-6A37B712652A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8423F99-FDEB-4C2E-9DC6-34352862F317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8423F99-FDEB-4C2E-9DC6-34352862F317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8423F99-FDEB-4C2E-9DC6-34352862F317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8423F99-FDEB-4C2E-9DC6-34352862F317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E92F59C5-A771-4448-93B6-D36ADECFAEBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E92F59C5-A771-4448-93B6-D36ADECFAEBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDBC4926-0093-482C-95F4-3AF9CCD87A43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDBC4926-0093-482C-95F4-3AF9CCD87A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDBC4926-0093-482C-95F4-3AF9CCD87A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDBC4926-0093-482C-95F4-3AF9CCD87A43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0B6F9C8A-6616-4484-8AA5-6A37B712652A} = {3CB884B2-9FDE-4545-A364-5F71CD79E1D6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9A76DB3-A239-42BE-86CE-F959802BF41B}
+	EndGlobalSection
+EndGlobal
