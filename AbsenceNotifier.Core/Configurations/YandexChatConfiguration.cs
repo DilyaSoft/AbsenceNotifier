@@ -5,6 +5,7 @@ namespace AbsenceNotifier.Core.Configurations
     public sealed class YandexChatConfiguration
     {
         public const string GeneralChatUsersNotFoundError = "Users for general chat was not provided";
+        public string BotApiUrl {  get; set; }
         public YandexUser[]? Managers { get; set; }
         public YandexUser[]? UserInGeneralChat {  get; set; }
         public string? ChatBotLogin { get; set; }

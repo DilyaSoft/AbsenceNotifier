@@ -48,7 +48,7 @@ namespace AbsenceNotifier.Console
                         .CreateLogger();
 
                 var configuration = hostContext.Configuration;
-                services.AddJobServices(configuration);
+                services.AddConsoleAppServices(configuration);
                 services.Configure<ApplicationCommonConfiguration>(configuration.GetSection("ApplicationCommonConfiguration"));
                 services.Configure<RocketChatConfiguration>(configuration.GetSection("RocketChatConfiguration"));
                 services.Configure<SmtpConfiguration>(configuration.GetSection("SmtpConfiguration"));

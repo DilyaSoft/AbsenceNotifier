@@ -33,6 +33,22 @@ namespace AbsenceNotifier.Core
             services.AddScoped<ITimeOffHelper, TimeOffHelper>();
             services.AddScoped<ISavedChatsManager, SavedChatsManager>();
             services.AddScoped<IDataProtectionProviderHelper, DataProtectionProviderHelper>();
+
+            var yandexConfig = configuration.GetSection("TimeTasticConfiguration")
+                .GetSection("BaseTimeTasticUrl").Value;
+
+            if (yandexConfig == null)
+            {
+                throw new ArgumentException("Yandex config was not added");
+            }
+
+            var yandexUrl = configuration.GetSection("YandexChatConfiguration").GetSection("BotApiUrl").Value;
+
+            if (string.IsNullOrWhiteSpace(yandexUrl))
+            {
+                throw new ArgumentException("Yandex chat base url was not added");
+            }
+
             var timetasticConfig = configuration.GetSection("TimeTasticConfiguration")
                 .GetSection("BaseTimeTasticUrl").Value;
             if (timetasticConfig == null)
@@ -49,10 +65,10 @@ namespace AbsenceNotifier.Core
             services.AddRefitClient<IRocketChatApi>()
                 .ConfigureHttpClient(b => b.BaseAddress = new Uri(rocketChat));
             services.AddRefitClient<IYandexChatApi>()
-            .ConfigureHttpClient(b => b.BaseAddress = new Uri(YandexApiMessengerConstants.ApiMessengerBaseUrl));
+                .ConfigureHttpClient(b => b.BaseAddress = new Uri(yandexUrl));
         }
 
-        public static void AddJobServices(this IServiceCollection services, IConfiguration configuration)
+        public static void AddConsoleAppServices(this IServiceCollection services, IConfiguration configuration)
         {
             var timetasticConfig = configuration.GetSection("TimeTasticConfiguration")
                 .GetSection("BaseTimeTasticUrl").Value;
@@ -66,6 +82,21 @@ namespace AbsenceNotifier.Core
             {
                 throw new ArgumentException("Rocket chat base url was not added");
             }
+            var yandexConfig = configuration.GetSection("TimeTasticConfiguration")
+               .GetSection("BaseTimeTasticUrl").Value;
+
+            if (yandexConfig == null)
+            {
+                throw new ArgumentException("Yandex config was not added");
+            }
+
+            var yandexUrl = configuration.GetSection("YandexChatConfiguration").GetSection("BotApiUrl").Value;
+
+            if (string.IsNullOrWhiteSpace(yandexUrl))
+            {
+                throw new ArgumentException("Yandex chat base url was not added");
+            }
+
             services.AddScoped<MessengerContext>();
             services.AddScoped<YandexMessenger>();
             services.AddScoped<RockectChatMessenger>();
@@ -83,7 +114,7 @@ namespace AbsenceNotifier.Core
             services.AddRefitClient<IRocketChatApi>()
                 .ConfigureHttpClient(b => b.BaseAddress = new Uri(rocketChat));
             services.AddRefitClient<IYandexChatApi>()
-                .ConfigureHttpClient(b => b.BaseAddress = new Uri(YandexApiMessengerConstants.ApiMessengerBaseUrl));
+                .ConfigureHttpClient(b => b.BaseAddress = new Uri(yandexUrl));
         }
     }
 }
